@@ -34,7 +34,7 @@ export default function Experience() {
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-8">
               <div>
                 <h3 className="text-xl font-semibold text-neutral-100 mb-1 tracking-tight">
-                  Computer Specialist
+                  Full Stack Developer
                 </h3>
                 <p className="text-blue-400 font-medium text-sm mb-0.5">
                   UIC Technology Solutions
