@@ -34,7 +34,6 @@ export default function Navbar() {
           Dev Patel
         </a>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -53,7 +52,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           className="md:hidden flex flex-col justify-center gap-[5px] p-2"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -77,7 +75,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile dropdown */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 bg-[#0a0a0a] border-b border-neutral-800/50 ${
           menuOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'

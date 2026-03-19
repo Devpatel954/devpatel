@@ -7,6 +7,7 @@ const posts = [
       'How to architect an end-to-end ML system that survives contact with real data — from ingestion and validation to inference and monitoring.',
     readTime: '8 min read',
     tag: 'Architecture',
+    link: 'https://medium.com/@devp5340/engineering-notes-building-reliable-and-reproducible-machine-learning-pipelines-9dae8bf849c4',
   },
   {
     title: 'From Prototype to Deployment: Lessons from AWS',
@@ -14,6 +15,7 @@ const posts = [
       'Moving beyond Jupyter notebooks — building reproducible, scalable ML workflows on AWS Elastic Beanstalk and S3.',
     readTime: '6 min read',
     tag: 'Cloud',
+    link: 'https://medium.com/@devp5340/integrating-ai-into-full-stack-applications-lessons-learned-a898ebd1db44',
   },
   {
     title: 'Building AI Features into Full-Stack Systems',
@@ -21,6 +23,7 @@ const posts = [
       'Integrating NLP and zero-shot classification models into production APIs without sacrificing latency or reliability.',
     readTime: '7 min read',
     tag: 'ML Engineering',
+    link: 'https://medium.com/@devp5340/integrating-ai-into-full-stack-applications-lessons-learned-a898ebd1db44',
   },
   {
     title: 'Lessons from Kaggle Competitions',
@@ -28,6 +31,7 @@ const posts = [
       'What ensemble models, feature engineering, and leaderboard pressure teach you about real production ML engineering.',
     readTime: '5 min read',
     tag: 'Machine Learning',
+    link: 'https://medium.com/@devp5340/engineering-notes-building-reliable-and-reproducible-machine-learning-pipelines-9dae8bf849c4',
   },
 ];
 
@@ -47,37 +51,40 @@ export default function Blog() {
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-100 tracking-tight">
             Engineering Notes
           </h2>
-          <p className="text-neutral-600 text-sm mt-3">
+          <p className="text-neutral-400 text-sm mt-3">
             Technical writing on production systems, ML engineering, and architecture.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {posts.map((post, i) => (
-            <article
+            <a
               key={i}
+              href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`bg-[#0a0a0a] border border-neutral-800 hover:border-neutral-600 p-7 flex flex-col group cursor-pointer transition-all duration-500 hover:bg-[#0d0d0d] ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
               style={{ transitionDelay: inView ? `${i * 80}ms` : '0ms' }}
             >
               <div className="flex items-center justify-between mb-5">
-                <span className="text-[10px] font-medium text-neutral-600 border border-neutral-800 px-2.5 py-1 uppercase tracking-widest">
+                <span className="text-[10px] font-medium text-neutral-400 border border-neutral-800 px-2.5 py-1 uppercase tracking-widest">
                   {post.tag}
                 </span>
-                <span className="text-[10px] text-neutral-700">{post.readTime}</span>
+                <span className="text-[10px] text-neutral-500">{post.readTime}</span>
               </div>
 
               <h3 className="text-base font-semibold text-neutral-200 mb-3 group-hover:text-blue-300 transition-colors duration-200 leading-snug tracking-tight">
                 {post.title}
               </h3>
-              <p className="text-sm text-neutral-500 leading-relaxed flex-1">{post.excerpt}</p>
+              <p className="text-sm text-neutral-300 leading-relaxed flex-1">{post.excerpt}</p>
 
-              <div className="mt-6 flex items-center gap-2 text-[11px] text-neutral-700 group-hover:text-blue-500 transition-colors duration-200 uppercase tracking-widest">
-                <span>Coming Soon</span>
+              <div className="mt-6 flex items-center gap-2 text-[11px] text-neutral-400 group-hover:text-blue-400 transition-colors duration-200 uppercase tracking-widest">
+                <span>Read Now</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
               </div>
-            </article>
+            </a>
           ))}
         </div>
 

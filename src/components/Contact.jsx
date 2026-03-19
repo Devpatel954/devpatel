@@ -3,18 +3,18 @@ import { useInView } from '../hooks/useInView';
 const links = [
   {
     label: 'Email',
-    value: 'dev.patel@example.com',
-    href: 'mailto:dev.patel@example.com',
+    value: 'devp5340@gmail.com',
+    href: 'mailto:devp5340@gmail.com',
   },
   {
     label: 'GitHub',
-    value: 'github.com/devpatel',
-    href: 'https://github.com/devpatel',
+    value: 'github.com/Devpatel954',
+    href: 'https://github.com/Devpatel954',
   },
   {
     label: 'LinkedIn',
-    value: 'linkedin.com/in/devpatel',
-    href: 'https://linkedin.com/in/devpatel',
+    value: 'linkedin.com/in/devpatel117',
+    href: 'https://www.linkedin.com/in/devpatel117/',
   },
 ];
 
@@ -35,7 +35,7 @@ export default function Contact() {
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-100 tracking-tight mb-4">
               Get in Touch
             </h2>
-            <p className="text-neutral-500 leading-relaxed text-[15px]">
+            <p className="text-neutral-300 leading-relaxed text-[15px]">
               Open to full-time software engineering and machine learning engineering roles.
               Feel free to reach out directly.
             </p>
@@ -53,14 +53,14 @@ export default function Contact() {
                 className="flex items-center justify-between p-5 border border-neutral-800 hover:border-blue-500/50 group transition-all duration-200 hover:bg-[#080808]"
               >
                 <div>
-                  <p className="text-[10px] text-neutral-600 uppercase tracking-widest mb-1">
+                  <p className="text-[10px] text-neutral-400 uppercase tracking-widest mb-1">
                     {link.label}
                   </p>
                   <p className="text-sm text-neutral-300 group-hover:text-blue-300 transition-colors duration-200">
                     {link.value}
                   </p>
                 </div>
-                <span className="text-neutral-600 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200 text-lg">
+                <span className="text-neutral-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200 text-lg">
                   →
                 </span>
               </a>

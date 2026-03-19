@@ -54,7 +54,7 @@ export default function TechStack() {
               }`}
               style={{ transitionDelay: inView ? `${catIndex * 100}ms` : '0ms' }}
             >
-              <p className="text-[10px] font-medium text-neutral-600 tracking-[0.18em] uppercase mb-5">
+              <p className="text-[10px] font-medium text-neutral-400 tracking-[0.18em] uppercase mb-5">
                 {category}
               </p>
               <div className="flex flex-wrap gap-2">

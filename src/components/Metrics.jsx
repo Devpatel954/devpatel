@@ -51,7 +51,6 @@ export default function Metrics() {
           </h2>
         </div>
 
-        {/* Grid with 1px dividers */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-800/30">
           {metrics.map((m, i) => (
             <div
@@ -65,7 +64,7 @@ export default function Metrics() {
                 {m.value}
               </div>
               <div className="text-sm font-medium text-neutral-200 mb-1">{m.label}</div>
-              <div className="text-xs text-neutral-600">{m.sub}</div>
+              <div className="text-xs text-neutral-400">{m.sub}</div>
             </div>
           ))}
         </div>

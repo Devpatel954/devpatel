@@ -3,6 +3,58 @@ import { useInView } from '../hooks/useInView';
 
 const projects = [
   {
+    id: 10,
+    title: 'JD Analyzer (ResumeMatch)',
+    subtitle: 'Full-Stack AI Application',
+    summary:
+      'Full-stack AI system that analyzes resumes against job descriptions and provides match scores, missing skills, and optimization suggestions.',
+    architecture: [
+      'React Frontend',
+      'FastAPI Backend',
+      'PostgreSQL / MongoDB',
+      'Resume Parsing (NLP)',
+      'Embedding + Similarity Matching',
+      'AI Feedback Engine',
+      'Vercel / Render',
+    ],
+    highlights: [
+      'Semantic resume–JD matching using transformer embeddings (BERT/Sentence Transformers)',
+      'Resume parsing & skill extraction using NLP pipelines',
+      'Match scoring system with explainable AI feedback',
+  
+    ],
+    stack: ['React', 'FastAPI', 'Python', 'PostgreSQL', 'MongoDB', 'Hugging Face', 'Tailwind CSS'],
+    category: 'Full-Stack',
+    github: 'https://github.com/Devpatel954/jd-analyzer',
+    demo: 'https://jd-analyzer-psi.vercel.app/',
+  },
+  {
+    id: 11,
+    title: 'AlgoMentor AI',
+    subtitle: 'Full-Stack AI Application',
+    summary:
+      'AI-powered platform that helps users learn Data Structures & Algorithms through personalized guidance, problem breakdowns, and coding feedback.',
+    architecture: [
+      'React Frontend',
+      'FastAPI Backend',
+      'User Progress DB (PostgreSQL)',
+      'Problem Engine',
+      'AI Tutor (LLM Integration)',
+      'Code Analysis + Feedback',
+      'Vercel / Render',
+    ],
+    highlights: [
+      'AI-driven step-by-step explanations for DSA problems',
+      'Personalized learning paths based on user performance',
+      'Real-time code feedback and optimization suggestions',
+     
+    ],
+    stack: ['React', 'FastAPI', 'Python', 'PostgreSQL', 'Hugging Face', 'Mistral AI', 'Tailwind CSS'],
+    category: 'Full-Stack',
+    github: 'https://github.com/Devpatel954/algomentor-ai',
+    demo: 'https://algomentor-ai.vercel.app/',
+  },
+  {
     id: 1,
     title: 'Student Performance Prediction',
     subtitle: 'Production ML Pipeline',
@@ -24,7 +76,7 @@ const projects = [
     ],
     stack: ['Python', 'FastAPI', 'Scikit-learn', 'AWS S3', 'Elastic Beanstalk'],
     category: 'ML',
-    github: 'https://github.com/devpatel',
+    github: 'https://github.com/Devpatel954/end-to-end-ml-',
     demo: null,
   },
   {
@@ -48,8 +100,8 @@ const projects = [
     ],
     stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Hugging Face', 'Tailwind CSS'],
     category: 'Full-Stack',
-    github: 'https://github.com/devpatel',
-    demo: null,
+    github: 'https://github.com/Devpatel954/cars',
+    demo: 'https://cars-3.vercel.app/',
   },
   {
     id: 3,
@@ -65,8 +117,8 @@ const projects = [
     ],
     stack: ['Python', 'NumPy', 'Scikit-learn', 'Streamlit'],
     category: 'ML',
-    github: 'https://github.com/devpatel',
-    demo: null,
+    github: 'https://github.com/Devpatel954/Kaggle-Competition---Predicting-road-accidents',
+    demo: 'https://devpatel954-kaggle-competition---predicting-road-acc-app-netldh.streamlit.app/',
   },
   {
     id: 4,
@@ -82,7 +134,7 @@ const projects = [
     ],
     stack: ['Python', 'LightGBM', 'XGBoost', 'Scikit-learn'],
     category: 'ML',
-    github: 'https://github.com/devpatel',
+    github: 'https://github.com/Devpatel954/Kaggle-Competition-Predicting-the-beats-per-minute-',
     demo: null,
   },
   {
@@ -99,7 +151,7 @@ const projects = [
     ],
     stack: ['TensorFlow', 'Python', 'Streamlit'],
     category: 'ML',
-    github: 'https://github.com/devpatel',
+    github: 'https://github.com/Devpatel954/Customer-churn-prediction-model-using-ANN',
     demo: null,
   },
   {
@@ -116,7 +168,7 @@ const projects = [
     ],
     stack: ['Python', 'Scikit-learn', 'Pandas'],
     category: 'ML',
-    github: 'https://github.com/devpatel',
+    github: 'https://github.com/Devpatel954/Heart-disease-prediction-model',
     demo: null,
   },
   {
@@ -133,7 +185,7 @@ const projects = [
     ],
     stack: ['Flask', 'Python', 'Tailwind CSS', 'Gunicorn', 'Render'],
     category: 'Full-Stack',
-    github: 'https://github.com/devpatel',
+    github: 'https://github.com/Devpatel954/flask-app',
     demo: 'https://postpulse.onrender.com',
   },
   {
@@ -150,7 +202,7 @@ const projects = [
     ],
     stack: ['JavaScript', 'Node.js', 'WebSockets', 'Express'],
     category: 'Full-Stack',
-    github: 'https://github.com/devpatel',
+    github: null,
     demo: null,
   },
   {
@@ -167,7 +219,7 @@ const projects = [
     ],
     stack: ['React', 'JavaScript', 'REST APIs', 'Node.js'],
     category: 'Full-Stack',
-    github: 'https://github.com/devpatel',
+    github: null,
     demo: null,
   },
 ];
@@ -185,7 +237,6 @@ function ProjectCard({ project, index, inView }) {
       }`}
       style={{ transitionDelay: inView ? `${index * 55}ms` : '0ms' }}
     >
-      {/* Top row */}
       <div className="flex items-start justify-between mb-4">
         <span
           className={`text-[10px] font-medium tracking-widest uppercase px-2.5 py-1 border ${categoryStyle[project.category]}`}
@@ -198,7 +249,7 @@ function ProjectCard({ project, index, inView }) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] text-neutral-600 hover:text-neutral-300 transition-colors uppercase tracking-widest"
+              className="text-[10px] text-neutral-400 hover:text-neutral-100 transition-colors uppercase tracking-widest"
             >
               GitHub
             </a>
@@ -208,7 +259,7 @@ function ProjectCard({ project, index, inView }) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] text-neutral-600 hover:text-neutral-300 transition-colors uppercase tracking-widest"
+              className="text-[10px] text-neutral-400 hover:text-neutral-100 transition-colors uppercase tracking-widest"
             >
               Live
             </a>
@@ -216,27 +267,24 @@ function ProjectCard({ project, index, inView }) {
         </div>
       </div>
 
-      {/* Title */}
       <h3 className="text-[15px] font-semibold text-neutral-100 mb-1 group-hover:text-blue-300 transition-colors duration-200 leading-snug tracking-tight">
         {project.title}
       </h3>
-      <p className="text-[11px] text-neutral-600 mb-3 tracking-wide uppercase">{project.subtitle}</p>
+      <p className="text-[11px] text-neutral-400 mb-3 tracking-wide uppercase">{project.subtitle}</p>
 
-      {/* Summary */}
-      <p className="text-sm text-neutral-500 leading-relaxed mb-4 flex-1">{project.summary}</p>
+      <p className="text-sm text-neutral-300 leading-relaxed mb-4 flex-1">{project.summary}</p>
 
-      {/* Architecture pipeline */}
       {project.architecture && (
         <div className="mb-4">
-          <p className="text-[10px] text-neutral-700 uppercase tracking-widest mb-2">Pipeline</p>
+          <p className="text-[10px] text-neutral-500 uppercase tracking-widest mb-2">Pipeline</p>
           <div className="flex flex-wrap gap-1 items-center">
             {project.architecture.map((step, i) => (
               <span key={i} className="flex items-center gap-1">
-                <span className="text-[10px] text-neutral-500 bg-neutral-900 border border-neutral-800 px-1.5 py-0.5">
+                <span className="text-[10px] text-neutral-300 bg-neutral-900 border border-neutral-800 px-1.5 py-0.5">
                   {step}
                 </span>
                 {i < project.architecture.length - 1 && (
-                  <span className="text-[10px] text-neutral-700">→</span>
+                  <span className="text-[10px] text-neutral-500">→</span>
                 )}
               </span>
             ))}
@@ -244,22 +292,20 @@ function ProjectCard({ project, index, inView }) {
         </div>
       )}
 
-      {/* Highlights */}
       <ul className="space-y-1 mb-4">
         {project.highlights.map((h, i) => (
-          <li key={i} className="text-xs text-neutral-500 flex items-start gap-2">
+          <li key={i} className="text-xs text-neutral-300 flex items-start gap-2">
             <span className="text-blue-700 flex-shrink-0 mt-0.5 font-bold">·</span>
             {h}
           </li>
         ))}
       </ul>
 
-      {/* Stack */}
       <div className="pt-4 border-t border-neutral-900 flex flex-wrap gap-1.5">
         {project.stack.map((tech) => (
           <span
             key={tech}
-            className="text-[10px] text-neutral-600 px-2 py-0.5 bg-neutral-900 border border-neutral-800/60"
+            className="text-[10px] text-neutral-400 px-2 py-0.5 bg-neutral-900 border border-neutral-800/60"
           >
             {tech}
           </span>
@@ -291,7 +337,6 @@ export default function Projects() {
           </h2>
         </div>
 
-        {/* Filter tabs */}
         <div
           className={`flex gap-2 mb-10 transition-all duration-700 delay-100 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
@@ -302,7 +347,7 @@ export default function Projects() {
               className={`text-[11px] font-medium tracking-wide px-4 py-2 border transition-all duration-200 ${
                 filter === cat
                   ? 'border-blue-500 text-blue-400 bg-blue-500/5'
-                  : 'border-neutral-800 text-neutral-500 hover:border-neutral-700 hover:text-neutral-300'
+                  : 'border-neutral-800 text-neutral-300 hover:border-neutral-700 hover:text-neutral-100'
               }`}
             >
               {cat}
@@ -310,7 +355,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Project grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} inView={inView} />
